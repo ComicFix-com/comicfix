@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useWebSocket } from '../contexts/WebSocketContext';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Badge from './Badge';
 import { GithubIcon, LinkedinIcon } from 'lucide-react';
 
-const UserProfile = ({ user }) => {
+const UserProfile = ({ userId }) => {
+  const [user, setUser] = useState(null);
+  const socket = useWebSocket();
+
+  useEffect(() => {
+    if (socket) {
+      socket.emit('getUser', userId);
+      socket.on('userData', (data) => {
+        setUser(data);
+      });
+    }
+
+    return () => {
+      if (socket) {
+        socket.off('userData');
+      }
+    };
+  }, [socket, userId]);
+
+  if (!user) return <div>Loading...</div>;
+
   return (
     <Card className="w-full max-w-md">
       <CardHeader>
