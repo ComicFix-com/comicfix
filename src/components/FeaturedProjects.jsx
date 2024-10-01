@@ -43,7 +43,8 @@ const FeaturedProjects = () => {
     "muhammedadnanv/UniW",
     "muhammedadnanv/Law-Buddy-",
     "muhammedadnanv/Widgets",
-    "ComicFix-com/FinSage-"
+    "ComicFix-com/FinSage-",
+    "ComicFix-com/ZoXach"
   ];
 
   return (
