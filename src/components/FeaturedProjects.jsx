@@ -8,6 +8,7 @@ const ProjectCard = ({ repoFullName }) => {
 
   if (isLoading) return <Card><CardContent>Loading...</CardContent></Card>;
   if (error) return <Card><CardContent>Error: {error.message}</CardContent></Card>;
+  if (!repo) return <Card><CardContent>No data available</CardContent></Card>;
 
   return (
     <Card className="overflow-hidden">

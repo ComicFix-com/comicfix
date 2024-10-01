@@ -10,5 +10,7 @@ export const useGitHubData = (repoFullName) => {
   return useQuery({
     queryKey: ['githubRepo', repoFullName],
     queryFn: () => fetchRepoData(repoFullName),
+    retry: 1,
+    refetchOnWindowFocus: false,
   });
 };
