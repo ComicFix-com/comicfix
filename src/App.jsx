@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -12,11 +12,11 @@ const App = () => {
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/project/:id" component={ProjectPage} />
-            <Route path="/user/:id" component={UserProfile} />
-          </Switch>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/project/:id" element={<ProjectPage />} />
+            <Route path="/user/:id" element={<UserProfile />} />
+          </Routes>
         </main>
         <Footer />
       </div>
