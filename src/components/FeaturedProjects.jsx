@@ -39,11 +39,10 @@ const ProjectCard = ({ repoFullName }) => {
 
 const FeaturedProjects = () => {
   const projects = [
-    "muhammedadnanv/Corn.ai",
-    "muhammedadnanv/UniW",
-    "muhammedadnanv/Law-Buddy-",
-    "muhammedadnanv/Widgets",
+    "ComicFix-com/Corn.ai",
+    "ComicFix-com/AI-tools-for-you",
     "ComicFix-com/FinSage-",
+    "ComicFix-com/UniW",
     "ComicFix-com/ZoXach"
   ];
 
