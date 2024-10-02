@@ -43,7 +43,9 @@ const FeaturedProjects = () => {
     "ComicFix-com/AI-tools-for-you",
     "ComicFix-com/FinSage-",
     "ComicFix-com/UniW",
-    "ComicFix-com/ZoXach"
+    "ComicFix-com/ZoXach",
+    "ComicFix-com/Law-Buddy-"
+    
   ];
 
   return (
